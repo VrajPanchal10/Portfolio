@@ -1,6 +1,6 @@
 # 🌐 Vraj Panchal — Portfolio Website
 
-<div align="center">
+<!-- <div align="center"> -->
 
 A sleek and responsive developer portfolio crafted using HTML, CSS, and JavaScript to present my projects, technical skills, and professional journey in an interactive way.
 
@@ -8,7 +8,7 @@ The website features modern UI/UX design, smooth animations, dark/light theme su
 
 Built with a focus on performance, simplicity, and clean user experience to create a strong professional online presence.
 
-</div>
+<!-- </div> -->
 
 ---
 
