@@ -14,7 +14,7 @@ Built with a focus on performance, simplicity, and clean user experience to crea
 
 ## 🚀 Live Demo
 
-🔗 **[View Live Portfolio](https://porfolio-pearl-ten-82.vercel.app)**
+🔗 **[View Live Portfolio](https://vrajportfolio.vercel.app/)**
 
 ---
 
