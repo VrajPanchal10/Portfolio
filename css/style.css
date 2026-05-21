@@ -1353,7 +1353,11 @@ a {
     color: #94a3b8;
 }
 
-
+.footer-name {
+  color: #2563eb; /* Blue */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
 
 
 /* ============================================================
@@ -1811,6 +1815,9 @@ body.dark .toggle-thumb i {
     box-shadow: 0 8px 20px rgba(99, 102, 241, 0.32);
 }
 
+body.dark .footer-name {
+  color: #8b5cf6; /* Purple */
+}
 
 
 /* ===== RESPONSIVE ===== */
