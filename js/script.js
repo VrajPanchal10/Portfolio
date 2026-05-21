@@ -24,13 +24,20 @@ window.addEventListener("scroll", () => {
 // ===== SMOOTH SCROLL FOR ALL HASH LINKS =====
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-      // Close mobile menu if open
-      document.getElementById("mobileMenu").classList.remove("open");
-      document.getElementById("hamIcon").className = "fa-solid fa-bars";
+    const href = this.getAttribute("href");
+    if (href === "#") return;
+    
+    try {
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth" });
+        // Close mobile menu if open
+        document.getElementById("mobileMenu").classList.remove("open");
+        document.getElementById("hamIcon").className = "fa-solid fa-bars";
+      }
+    } catch (err) {
+      console.warn("Invalid scroll target:", href);
     }
   });
 });
@@ -46,7 +53,7 @@ hamburger.addEventListener("click", () => {
 });
 
 // Close mobile menu when any mobile link clicked
-document.querySelectorAll(".mobile-link, .mobile-cta").forEach((link) => {
+document.querySelectorAll(".mobile-link").forEach((link) => {
   link.addEventListener("click", () => {
     mobileMenu.classList.remove("open");
     hamIcon.className = "fa-solid fa-bars";
@@ -56,7 +63,6 @@ document.querySelectorAll(".mobile-link, .mobile-cta").forEach((link) => {
 // ===== TYPING ANIMATION =====
 const roles = [
   "Full Stack Developer.",
-  // "Code. Commit. Deploy.",
   "Cloud & DevOps Enthusiast.",
 ];
 let roleIndex = 0,
