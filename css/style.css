@@ -810,16 +810,80 @@ a {
 }
 
 /* ===== TOP ===== */
+/*
+ * .project-top is a fixed-height flex container shared by all three cards.
+ * Every logo img fills this container and uses object-fit:contain so that
+ * aspect ratio is always preserved and nothing is clipped.
+ * The fomo-logo-wrapper div has been REMOVED from the HTML — it was the
+ * source of the black rectangle background on the Fomo Cinema logo.
+ */
 .project-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 150px;          /* ~50% larger than the old 72px baseline */
+    overflow: hidden;       /* safety — no clipping of image content */
+    box-sizing: border-box;
+    padding: 6px 8px;     /* breathing room so logos don't touch card edges */
 }
 
-/* Folder */
+/* Folder icon (not used by logos, kept for safety) */
 .project-folder {
     font-size: 22px;
 }
+
+/* ===== PROJECT CUSTOM LOGOS ===== */
+/*
+ * All three logos share EXACTLY these rules.
+ * width:100% / height:100% fills the .project-top container.
+ * object-fit:contain ensures the image NEVER stretches or crops.
+ * object-position:center keeps it centred inside the container.
+ */
+.project-logo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: filter 0.3s ease;
+}
+
+/* Dark Mode — add a soft glow to logos that have white backgrounds
+ * so they remain visible on dark cards without a heavy drop-shadow */
+.dark .project-logo {
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.15));
+}
+
+/* ===== RESPONSIVE LOGO HEIGHTS ===== */
+/* Laptop / large tablet */
+@media (max-width: 1024px) {
+    .project-top {
+        height: 130px;
+        /* padding: 6px 8px; */
+        padding: 8px 10px;
+    }
+}
+
+/* Tablet / stacked cards */
+@media (max-width: 768px) {
+    .project-top {
+        height: 140px;
+        /* padding: 6px 8px; */
+        padding: 8px 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .project-top {
+        height: 120px;
+        /* padding: 6px 8px; */
+        padding: 6px 12px;
+    }
+}
+
+
 
 /* =========================
    PROJECT ACTION BUTTONS
@@ -828,7 +892,7 @@ a {
 .project-actions {
     display: flex;
     gap: 12px;
-    margin-top: 20px;
+    margin-top: 24px; /* Spacing: Technology Stack -> 24px -> Action Buttons */
     flex-wrap: wrap;
 }
 
@@ -892,10 +956,29 @@ a {
 
 /* ===== TITLE ===== */
 .project-title {
+    /* display: flex;
+    justify-content:flex-start; */
+    padding-left: 18px;
     font-size: 20px;
-    margin-top: 18px;
+    /* margin-bottom: 0px; */
     font-weight: 600;
     color: #111827;
+}
+
+/* ===== SUBTITLE ===== */
+.project-subtitle {
+    display: flex;
+    justify-content: center;
+    /* display: block; */
+    font-size: 13px;
+    font-weight: 400;
+    color: #4b5563;
+    margin-bottom: 0px;
+    letter-spacing: 0.5px;
+}
+
+.dark .project-subtitle {
+    color: var(--text-muted-dark) !important;
 }
 
 /* ===== DESC ===== */
@@ -905,6 +988,43 @@ a {
     line-height: 1.6;
     margin-top: 10px;
 }
+
+/* ===== FEATURE LIST ===== */
+.project-desc-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 16px; /* Spacing: Subtitle -> 16px -> Feature List */
+    margin-bottom: 0px;
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.45;
+}
+
+.project-desc-list li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 7px;
+}
+
+.project-desc-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.project-desc-list li:last-child {
+    margin-bottom: 0;
+}
+
+.dark .project-desc-list {
+    color: var(--text-muted-dark) !important;
+}
+
+
 
 /* ===== FILTER ROW ===== */
 .filter-row {
@@ -943,7 +1063,7 @@ a {
 
 /* ===== TECH STACK ===== */
 .project-tags {
-    margin-top: 18px;
+    margin-top: 22px; /* Spacing: Feature List -> 22px -> Technology Stack */
     display: flex;
     flex-wrap: wrap;
     gap: 12px;

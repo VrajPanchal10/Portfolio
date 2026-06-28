@@ -5,16 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vraj Panchal | Portfolio</title>
-  
-   <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DH0TBJ75HX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'G-DH0TBJ75HX');
-    </script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DH0TBJ75HX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-DH0TBJ75HX');
+  </script>
 
   <link rel="icon" type="image/svg+xml" href="Images/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -255,8 +255,9 @@
 
                     <div class="timeline-body">
                       <p class="experience-summary">
-                        Collaborating with the development team to build and refine responsive web interfaces. 
-                        Focusing on learning React.js, component lifecycle, and modern styling patterns through practical, hands-on tasks.
+                        Collaborating with the development team to build and refine responsive web interfaces.
+                        Focusing on learning React.js, component lifecycle, and modern styling patterns through
+                        practical, hands-on tasks.
                       </p>
                     </div>
                   </div>
@@ -310,14 +311,80 @@
         <div class="projects-grid">
           <div class="project-card glass-card reveal" data-category="fullstack">
             <div class="project-top">
-              <span class="project-folder">📋</span>
+              <img src="Images/CEAT-Logo_same_canvas.png" alt="College Event Attendance Tracker Logo" class="project-logo" loading="lazy" decoding="async">
             </div>
-            <h3 class="project-title">College Event Attendance Tracker</h3>
-            <p class="project-desc">
-              A production-grade full-stack platform for college event management. Features JWT auth, role-based access
-              (student/faculty), event calendar with category chips, reminder badges, bulk attendance marking,
-              search/filter, CSV export, analytics dashboard, banner image uploads via Multer, and rate limiting.
-            </p>
+
+            <h3 class="project-title">Event Attendance Tracker</h3>
+            <!-- <span class="project-subtitle">Smart Event Management Platform</span> -->
+
+            <ul class="project-desc-list">
+              <li>Full-stack Smart event management platform</li>
+              <li>JWT authentication & role-based dashboards</li>
+              <li>Attendance tracking with analytics & CSV export</li>
+              <li>Event calendar, reminders & banner uploads</li>
+            </ul>
+            <div class="project-tags">
+
+              <div class="tech-item">
+                <img src="Images/html5.svg" alt="HTML" loading="lazy">
+                <span>HTML</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Images/css3.svg" alt="CSS" loading="lazy">
+                <span>CSS</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
+                  loading="lazy">
+                <span>Node.js</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"
+                  loading="lazy">
+                <span>MongoDB</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Images/express.svg" alt="Express js" loading="lazy">
+                <span>Express js</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Images/javascript.svg" alt="JavaScript" loading="lazy">
+                <span>JavaScript</span>
+              </div>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://github.com/VrajPanchal10/College-Event-Attendance-Tracker" target="_blank"
+                class="project-btn github-btn">
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+              <a href="https://college-event-attendance-tracker.netlify.app/" target="_blank"
+                class="project-btn live-btn">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+                Visit Site
+              </a>
+            </div>
+
+          </div>
+          <div class="project-card glass-card reveal" data-category="fullstack">
+            <div class="project-top">
+              <img src="Images/CareerPrep-Logo_same_canvas.png" alt="CareerPrep Logo" class="project-logo" loading="lazy" decoding="async">
+            </div>
+            <h3 class="project-title">CareerPrep</h3>
+            <!-- <span class="project-subtitle">PREPARE . PRACTICE . PERFORM</span> -->
+            <ul class="project-desc-list">
+              <li>AI-powered placement preparation platform</li>
+              <li>ATS resume analysis & AI mock interviews</li>
+              <li>Coding practice with performance analytics</li>
+              <li>Resume builder powered by Gemini AI</li>
+            </ul>
+            
             <div class="project-tags">
 
               <div class="tech-item">
@@ -338,13 +405,71 @@
               </div>
 
               <div class="tech-item">
-                <img src="Images/html5.svg" alt="HTML" loading="lazy">
-                <span>HTML</span>
+                <img src="Images/react.svg" alt="HTML" loading="lazy">
+                <span>React</span>
               </div>
 
               <div class="tech-item">
-                <img src="Images/css3.svg" alt="CSS" loading="lazy">
-                <span>CSS</span>
+                <img src="Images/sass-original.svg" alt="CSS" loading="lazy">
+                <span>SCSS</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Images/google-original.svg" alt="JavaScript" loading="lazy">
+                <span>Gemini AI</span>
+              </div>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://github.com/VrajPanchal10/CareerPrep" target="_blank" class="project-btn github-btn">
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+              <a href="https://careerprep-platform.vercel.app/" target="_blank" class="project-btn live-btn">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+                Visit Site
+              </a>
+            </div>
+
+          </div>
+          <div class="project-card glass-card reveal" data-category="fullstack">
+            <div class="project-top">
+              <img src="Images/New-FomoCinema-Logo_same_canvas_2.png" alt="Fomo Cinema Logo" class="project-logo" loading="lazy" decoding="async">
+            </div>
+            <h3 class="project-title">Fomo Cinema</h3>
+            <!-- <span class="project-subtitle">EAT . WATCH . ENJOY</span> -->
+            <ul class="project-desc-list">
+              <li>Full-stack movie ticket booking platform</li>
+              <li>Real-time seat selection & secure authentication</li>
+              <li>Admin dashboard for movies & bookings</li>
+              <li>Responsive UI with modern booking experience</li>
+            </ul>
+            <div class="project-tags">
+              <div class="tech-item">
+                <img src="Images/react-original.svg" alt="HTML" loading="lazy">
+                <span>React</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
+                  loading="lazy">
+                <span>Node.js</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Images/express.svg" alt="Express js" loading="lazy">
+                <span>Express js</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Images/tailwindcss-original.svg" alt="CSS" loading="lazy">
+                <span>Tailwind CSS</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"
+                  loading="lazy">
+                <span>MongoDB</span>
               </div>
 
               <div class="tech-item">
@@ -354,19 +479,18 @@
             </div>
 
             <div class="project-actions">
-              <a href="https://github.com/VrajPanchal10/College-Event-Attendance-Tracker" target="_blank"
-                class="project-btn github-btn">
+              <a href="https://github.com/VrajPanchal10/Fomo-Cinema" target="_blank" class="project-btn github-btn">
                 <i class="fab fa-github"></i>
                 GitHub
               </a>
-              <a href="https://college-event-attendance-tracker.netlify.app/" target="_blank"
-                class="project-btn live-btn">
+              <a href="https://fomo-cinema.vercel.app/" target="_blank" class="project-btn live-btn">
                 <i class="fas fa-arrow-up-right-from-square"></i>
-                Live Demo
+                Visit Site
               </a>
             </div>
 
           </div>
+
         </div>
 
       </div>
